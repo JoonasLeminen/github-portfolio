@@ -14,14 +14,31 @@ html {
 :root {
     --pink: #ff3258;
     --white: #ffffff;
+    --off-white: #ffffffc4;
+    --black: #010101;
+
 
     --nav-height: 8rem;
+
+    --fs-h1: 7.5rem;
+    --fs-h2: 6rem;
+    --fs-h3: 4rem;
+
+    --gutter-xx-small: 2rem;
+    --gutter-x-small: 3rem;
+    --gutter-small: 4rem;
+    --gutter-medium: 6rem;
+    --gutter-large: 8rem;
+    --gutter-huge: 10rem;
+    --gutter-x-huge: 20rem;
 }
 
 body {
     font-family: 'Jost', sans-serif;
-    color: var(--white);
+    color: var(--off-white);
     font-size: 1.8rem;
+    background-color: var(--black);
+    font-weight: 300;
 }
 
 a {
@@ -36,9 +53,55 @@ a {
     font-size: 2.2rem;
 }
 
+.btn-text {
+    display: inline-block;
+    padding: .8rem .5rem;
+    border-bottom: 1px solid var(--pink);
+}
+
+img {
+    object-fit: contain;
+}
+
+section {
+    padding: var(--gutter-huge) 0;
+}
+
 .row {
     max-width: 1180px;
     margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--white);
+    font-weight: 400;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    height: .3rem;
+    width: 12rem;
+    margin-top: 1rem;
+    background-color: var(--pink);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+ul {
+    list-style-position: inside;
 }
 
 /* Header */
@@ -50,6 +113,7 @@ header {
     background-image: url('images/header.jpg');
     background-size: cover;
     background-position: center;
+    /*background-attachment: fixed;*/
 }
 
 header .row {
@@ -79,6 +143,46 @@ nav a {
     margin: 1rem 0 3rem;
 }
 
-h1 {
-    font-size: 7.5rem;
+/* My work */
+
+.work-box {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-large);
+    margin-top: var(--gutter-x-small);
+}
+
+.work-box:not(:last-child) {
+    margin-bottom: var(--gutter-x-huge);
+}
+
+.work-box-text > * {
+    margin-top: var(--gutter-xx-small);
+}
+
+.work-box-img {
+    max-width: 726px;
+}
+
+.work-box-img img {
+    max-width: 100%;
+}
+
+.work-box-links {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-x-small)
+}
+
+.github-link {
+    transition: all 0.3s;
+}
+
+.github-link:hover,
+.github-link:focus {
+    transform: scale(1.3);
+}
+
+.github-link img {
+    height: 2.8rem;
 }
