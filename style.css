@@ -23,6 +23,7 @@ html {
     --fs-h1: 7.5rem;
     --fs-h2: 6rem;
     --fs-h3: 4rem;
+    --fs-body: 2rem;
 
     --gutter-xx-small: 2rem;
     --gutter-x-small: 3rem;
@@ -36,9 +37,15 @@ html {
 body {
     font-family: 'Jost', sans-serif;
     color: var(--off-white);
-    font-size: 1.8rem;
+    font-size: var(--fs-body);
+    line-height: 1.7;
     background-color: var(--black);
     font-weight: 300;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
 }
 
 a {
@@ -185,4 +192,50 @@ nav a {
 
 .github-link img {
     height: 2.8rem;
+}
+
+/* About me */
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-huge);
+    margin-top: var(--gutter-medium);
+}
+
+.about-text p {
+    margin-bottom: var(--gutter-x-small);
+}
+
+.about-img {
+    flex: 0 0 250px;
+}
+
+/* Contact */
+
+.contact {
+    max-width: 650px;
+}
+
+.contact p {
+    margin: var(--gutter-medium) 0 var(--gutter-small);
+}
+
+/* Footer */
+
+footer {
+    margin-top: var(--gutter-large) 0 var(--gutter-small);
+    text-align: center;
+}
+
+.footer-social {
+    margin-bottom: var(--gutter-xx-small);
+}
+
+/*.footer-social a:not(:last-child) {
+    margin-right: var(--gutter-xx-small);
+}*/
+
+.footer-social img {
+    height: 40px;
 }
